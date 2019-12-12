@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   root "grams#index"
 
-  resources :grams, only: [:new, :create, :show] 
+  resources :grams, only: [:new, :create, :show, :edit] 
 
 end
