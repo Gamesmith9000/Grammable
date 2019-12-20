@@ -4,47 +4,17 @@
     Styling stretch goals:
     (1) Font that scales to device size
     (2) Add proper validation for when 'image' uploaded isn't really an image
-        - This might effect tests... 
-    (3) Improved flash message display
-    (4) Improved image scaling for grams, depending on device (small look good so far, large not so much)
-    (5) Improve styling for warnings on forms for invalid fields
+        - This might effect tests...     
+    (3) Improved image scaling for grams, depending on device (small look good so far, large not so much)
+    (4) Improve styling for warnings on forms for invalid fields
 
 */
 
-/*
-
-    Lessons 19, at section : Styling the GramController's New Action
-
-*/
-
-/* To do: Review all class declation syntax here
-    Investigate these:
-
-    .card.form {
-
-    .card p, .card .message {
-
-*/
-
-/*
-    Note: just found:
-    Devise has classes named 
-        form-actions (though we already put 'my-btn' there
-        form-inputs
-    It also utilizes simple form
-*/
-
-
-/* Test out deleting a gram, editing a gram, adding a comment */
-
-/*              REVIEW ALL COMMENTS             */
-
-
-
+/* Adjust "invalid-feedback" class! (See #4 above) */
 
 body {
-    background-color: #d2d2d2;
-    font-family: 'Josefin Sans', sans-serif; /* <- Course value */
+    background-color: #f5f5f5;
+    font-family: 'Josefin Sans', sans-serif;
     
 }
 
@@ -60,23 +30,31 @@ label {
 
 //===============================
 
+$brand-color: #125688;
+
+.alert {
+    background-color: #bb1e1e;
+}
+
+.alert-danger {
+    color: white;
+}
 
 .brand {
-    color: #125688;                 /* <- Course value - shared blue */
+    color: $brand-color;
     font-size: 30px;
     font-family: 'Lobster Two', cursive;
 }
 
-.card { /* <- All course values */
+.card {
     background-color: #fff;
     border-radius: .25rem;
-    box-shadow: 0 1px 0 rgba (0, 0, 0, 0.25);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
     border: 1px solid #e8e8e8;
     margin-top: 40px;
-    padding: 0;
+    padding: 0;    
 }
 
-/* Did the lesson mean to do it this way? */
 .card.form {
     padding: 20px;
 }
@@ -84,6 +62,7 @@ label {
 .card p, .card .message {
     font-size: 18px;
     margin: 20px;
+    overflow-wrap: break-word;
 }
 
 .comment {
@@ -92,7 +71,7 @@ label {
 }
 
 .comment_handle {
-    color: #125688;                 /*<- Course value, same shared blue */
+    color: $brand-color;
     font-weight: bold;
     font-size: 18px;
 }
@@ -101,34 +80,37 @@ label {
     padding: 20px;
 }
 
+.flash-message {
+    position: absolute;
+    padding: 2px;
+    margin-top: 5px;
+    font-weight: 500;
+    border-radius: 4px;
+    color: white;
+}
+
 .gram-actions a {
     font-weight: bold;
     font-size: 16px;
     margin-right: 20px;
     margin-left: auto;
+    float: right;
 }
 
-.handle { /* <- All course values */
+.handle {
     margin: 10px;
-    color: #125688;                 /*<- Course value, same shared blue */
+    color: $brand-color;
     font-weight: bold;
     font-size: 18px;
 }
 
-/* Why .input and not just input ? Is it a Bootstrap class? */
-
-.input.boolean {
-    margin-left: 18px;
+input.boolean {
+    margin-left: 0px;
     margin-top: 5px;
-}
-
-.input.boolean label {
-    margin-top: 5px;
-    line-height: 44px;
 }
 
 .my-btn {
-    background-color: #125688;      /*<- Course value, same shared blue */
+    background-color: $brand-color;
     width: 100%;
     border: none;
     font-size: 24px;
@@ -136,9 +118,12 @@ label {
     margin-top: 10px;
 }
 
+.notice {
+    background-color: $brand-color;
+}
+
 .top-nav {
     background-color: white;
-    /* Next 3 items use the course values */
     border-bottom-color: #edeeee;
     border-bottom-width: 1px;
     border-bottom-style: solid;
@@ -150,7 +135,7 @@ label {
 
         a {
             font-weight: bold;
-            color: #125688;         /* <- Course value, same color used by .brand */
+            color: $brand-color;
             font-size: 16px;
             padding-left: 8px;
         }
