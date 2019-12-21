@@ -2,15 +2,13 @@
 
 /*
     Styling stretch goals:
-    (1) Font that scales to device size
-    (2) Add proper validation for when 'image' uploaded isn't really an image
-        - This might effect tests...     
-    (3) Improved image scaling for grams, depending on device (small look good so far, large not so much)
-    (4) Improve styling for warnings on forms for invalid fields
+    (1) Font that scales to device size 
+    (2) Improved image scaling for grams, depending on device (small look good so far, large not so much)
+    (3) Disallow submitting blank comments
 
 */
 
-/* Adjust "invalid-feedback" class! (See #4 above) */
+
 
 body {
     background-color: #f5f5f5;
@@ -23,6 +21,11 @@ input {
     font-weight: 400;
 }
 
+input.boolean {
+    margin-left: 0px;
+    margin-top: 5px;
+}
+
 label {
     font-size: 18px;
 }
@@ -31,9 +34,11 @@ label {
 //===============================
 
 $brand-color: #125688;
+$alert-color: #bb1e1e;
+$flash-border-radius: 4px;
 
 .alert {
-    background-color: #bb1e1e;
+    background-color: $alert-color;
 }
 
 .alert-danger {
@@ -85,7 +90,7 @@ $brand-color: #125688;
     padding: 2px;
     margin-top: 5px;
     font-weight: 500;
-    border-radius: 4px;
+    border-radius: $flash-border-radius;
     color: white;
 }
 
@@ -104,9 +109,11 @@ $brand-color: #125688;
     font-size: 18px;
 }
 
-input.boolean {
-    margin-left: 0px;
-    margin-top: 5px;
+.invalid-feedback {
+    background-color: $alert-color;
+    padding: 2px 1.25rem;
+    border-radius: $flash-border-radius;
+    color: white;
 }
 
 .my-btn {
@@ -117,6 +124,10 @@ input.boolean {
     color: white;
     margin-top: 10px;
 }
+
+.no-underline {
+    text-decoration: none !important;
+} 
 
 .notice {
     background-color: $brand-color;
