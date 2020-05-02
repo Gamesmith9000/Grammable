@@ -142,7 +142,7 @@ label {
 }
 
 .navbar-brand {
-    color: $brand-color;
+    color: $brand-color !important;
     font-size: 1.875rem;
     font-family: 'Lobster Two', cursive;
     
