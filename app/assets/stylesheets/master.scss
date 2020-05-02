@@ -45,10 +45,15 @@ $flash-border-radius: 4px;
     color: white;
 }
 
-.brand {
+.navbar-brand {
     color: $brand-color;
     font-size: 30px;
     font-family: 'Lobster Two', cursive;
+    
+    a {
+        color: $brand-color;
+        text-decoration: none;
+    }
 }
 
 .card {
@@ -125,30 +130,24 @@ $flash-border-radius: 4px;
     margin-top: 10px;
 }
 
-.no-underline {
-    text-decoration: none !important;
-} 
+.nav-link {
+    font-weight: bold;
+    color: $brand-color;
+    font-size: 16px;
+
+    &.disabled {
+        color:black;
+        font-weight: normal;
+    }
+}
 
 .notice {
     background-color: $brand-color;
 }
 
-.top-nav {
+.navbar {
     background-color: white;
     border-bottom-color: #edeeee;
     border-bottom-width: 1px;
     border-bottom-style: solid;
-    height: 70px;
-    padding-top: 15px;
-
-    .add {
-        margin-top: 10px;
-
-        a {
-            font-weight: bold;
-            color: $brand-color;
-            font-size: 16px;
-            padding-left: 8px;
-        }
-    }
 }
