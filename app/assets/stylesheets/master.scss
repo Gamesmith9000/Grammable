@@ -134,7 +134,7 @@ label {
     }
 }
 
-.navbar {
+.navbar, .navbar-extension {
     background-color: white;
     border-bottom-color: #edeeee;
     border-bottom-width: $navbar-border-width;
@@ -148,6 +148,14 @@ label {
     
     a {
         text-decoration: none;
+    }
+}
+
+.navbar-extension {
+    height: 4.5rem;
+    
+    &-expanded {
+        height: 9.5rem;
     }
 }
 
