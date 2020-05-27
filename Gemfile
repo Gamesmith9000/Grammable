@@ -78,7 +78,7 @@ gem 'figaro'
 gem 'fog-aws'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.5'
+  gem 'rspec-rails'
   gem "factory_bot_rails"
 end
 
