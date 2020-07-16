@@ -22,6 +22,6 @@ A sample user account can also be signed into. The username is `gram@example.com
 
 * The Home Page lists all of the grams and comments posted by users. 
 
-* To post your own gram, simply click on the `New Post` link and fill out the form. Click on the `Choose File` button and to select a photo (note: the uploaded file must be a `.jpg`, `.jpeg`, `.gif`, or `.png` file). You must also include a valid caption.
+* To post your own gram, simply click on the `New Post` link and fill out the form. Click on the `Choose File` button and to select a photo (note: the uploaded image must be a `.jpg`, `.jpeg`, `.gif`, or `.png` file). You must also include a valid caption.
 
 * To post a comment on a gram, simply find the `Add a comment` section of a gram, type your comment in the box, and click the `Add Comment` button.
